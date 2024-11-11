@@ -1,3 +1,8 @@
+<<<<<<<< HEAD
+# Это ваша локальная версия
+=======
+# Это версия с удаленного репозитория
+>>>>>>> main<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +73,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# my-azure-react-app
+>>>>>>> 4cb70b84ea78b07f81000739e1e3786fb3f9df7c
