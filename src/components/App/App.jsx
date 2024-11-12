@@ -10,11 +10,12 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/SpaceObject`);
+        console.log("API URL:", process.env.REACT_APP_API_URL);
+        const response = await axios.get("https://localhost:7161/api/SpaceObject");
+        console.log("Data received:", response.data);
         setSpaceObjects(response.data);
         setLoading(false);
       } catch (err) {
-        console.log("API URL:", process.env.REACT_APP_API_URL);
         console.error("Error fetching data:", err);
         setError("Error fetching data");
         setLoading(false);
