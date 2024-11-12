@@ -11,7 +11,7 @@ const App = () => {
     const fetchData = async () => {
       try {
         console.log("API URL:", process.env.REACT_APP_API_URL);
-        const response = await axios.get("https://localhost:7161/api/SpaceObject");
+        const response = await axios.get("https://webapplication220241104121304.azurewebsites.net/api/SpaceObject");
         console.log("Data received:", response.data);
         setSpaceObjects(response.data);
         setLoading(false);
