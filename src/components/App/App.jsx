@@ -4,31 +4,30 @@ import SpaceObjectCard from '../SpaceObject/SpaceObjectCard';
 
 const App = () => {
   const [spaceObjects, setSpaceObjects] = useState([]);
-  const [loading, setLoading] = useState(true); // добавлен флаг для загрузки
-  const [error, setError] = useState(null); // добавлено состояние для ошибки
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/SpaceObject`);
         setSpaceObjects(response.data);
-        setLoading(false); // устанавливаем, что загрузка завершена
+        setLoading(false);
       } catch (err) {
+        console.log("API URL:", process.env.REACT_APP_API_URL);
         console.error("Error fetching data:", err);
         setError("Error fetching data");
-        setLoading(false); // устанавливаем, что загрузка завершена даже в случае ошибки
+        setLoading(false);
       }
     };
 
     fetchData();
   }, []);
 
-  // Отображение состояния загрузки
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  // Отображение ошибки, если она есть
   if (error) {
     return <div>{error}</div>;
   }
