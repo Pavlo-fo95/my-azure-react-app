@@ -1,0 +1,10 @@
+{
+  "name": "Планета X",
+  "type": "Planet",
+  "coordinates": {
+    "x": 250,
+    "y": 300,
+    "z": 150
+  },
+  "imageUrl": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-YtsWLgtI0bjPH1PLNoKNwy6f/user-5Nyb42eFuKBMb8J4IxNR5YBR/img-ZMU1m4i14wX4MYAvUZfSmBXT.png?st=2024-11-13T21%3A30%3A49Z&se=2024-11-13T23%3A30%3A49Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-11-13T20%3A30%3A15Z&ske=2024-11-14T20%3A30%3A15Z&sks=b&skv=2024-08-04&sig=YiiW0%2B%2Byu7jq5/3S6VUM0%2BM%2BbyyyopHVMNlJzin%2BglU%3D"
+}

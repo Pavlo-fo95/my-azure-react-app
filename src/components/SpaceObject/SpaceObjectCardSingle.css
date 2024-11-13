@@ -1,0 +1,62 @@
+.space-object-card-single {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.space-object-card-single:hover {
+  transform: scale(1.05);
+}
+
+.input-group {
+  margin-bottom: 12px;
+}
+
+.label {
+  display: block;
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.generate-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.generate-button:hover {
+  background-color: #e0e0e0;
+}
+
+.space-object-name-single, .space-object-type-single, .space-object-coordinates-single {
+  font-size: 1em;
+  color: #333;
+  margin: 8px 0;
+}
+
+.space-object-image-single {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-top: 16px;
+}
