@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import SpaceObjectCard from '../SpaceObject/SpaceObjectCard';
-import SpaceObjectCardSingle from '../SpaceObject/SpaceObjectCardSingle';
 import SpaceObjectGenerator from '../SpaceObject/SpaceObjectGenerator';
-import '../SpaceObject/SpaceObjectCardSingle.css';
 import '../SpaceObject/SpaceObjectCard.css';
 
 const App = () => {
   const [spaceObjects, setSpaceObjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [generatedObject, setGeneratedObject] = useState(null);
 
   const fetchData = async () => {
     setLoading(true);
@@ -30,8 +27,7 @@ const App = () => {
   }, []);
 
   const handleGeneratedObject = (newObject) => {
-    setGeneratedObject(newObject);
-    setSpaceObjects((prev) => [...prev, newObject]); // Добавляем новый объект в список
+    setSpaceObjects((prev) => [...prev, newObject]); // Добавляем новый объект в общий список
   };
 
   if (loading) {
@@ -46,24 +42,14 @@ const App = () => {
     <div>
       <h1>Space Objects</h1>
       
-      {/* Кнопка для генерации нового космического объекта */}
+      {/* Компонент для генерации нового космического объекта */}
       <SpaceObjectGenerator onGenerate={handleGeneratedObject} />
 
       <div className="space-objects-container">
-        {/* Отображение сгенерированного объекта, если он есть */}
-        {generatedObject && (
-          <SpaceObjectCardSingle
-            name={generatedObject.name}
-            type={generatedObject.type}
-            coordinates={generatedObject.coordinates}
-            imageUrl={generatedObject.imageUrl}
-          />
-        )}
-
-        {/* Отображение всех загруженных космических объектов */}
+        {/* Отображение всех космических объектов, включая сгенерированные */}
         {spaceObjects.length > 0 ? (
           spaceObjects.map((spaceObject) => (
-            <SpaceObjectCard key={spaceObject.id} spaceObject={spaceObject} />
+            <SpaceObjectCard key={spaceObject.id || spaceObject.name} spaceObject={spaceObject} />
           ))
         ) : (
           <div>No space objects found.</div>
